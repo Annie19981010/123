@@ -98,11 +98,13 @@
     </div>
 
     <script>
+        // Function to navigate to the next question
         function nextQuestion(nextId) {
             document.querySelectorAll('.question, .result').forEach(q => q.classList.remove('active'));
             document.getElementById(nextId).classList.add('active');
         }
         
+        // Function to display the result
         function showResult(product, link) {
             document.querySelectorAll('.question, .result').forEach(q => q.classList.remove('active'));
             document.getElementById('result').classList.add('active');
@@ -110,6 +112,7 @@
             document.getElementById('productLink').href = link;
         }
 
+        // Function to restart the quiz
         function restartQuiz() {
             document.querySelectorAll('.question, .result').forEach(q => q.classList.remove('active'));
             document.getElementById('start').classList.add('active');
